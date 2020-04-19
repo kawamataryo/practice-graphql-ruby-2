@@ -5,7 +5,7 @@ module Queries
     extend ActiveSupport::Concern
 
     included do
-      field :tasks, ::Types::TaskType, null: false
+      field :tasks, Types::TaskType, null: false
     end
 
     def tasks
