@@ -1,5 +1,5 @@
 module Types
   class QueryType < Types::BaseObject
-    include Queries::Tasks
+    field :tasks, resolver: Resolvers::Tasks
   end
 end
