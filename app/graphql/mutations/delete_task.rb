@@ -4,11 +4,15 @@ module Mutations
   class DeleteTask < GraphQL::Schema::Mutation
     argument(:id, ID, required: true)
 
-    type Types::TaskType
+    class DeleteResultType < Types::BaseObject
+      field :deleted, Boolean, null: false
+    end
+
+    type DeleteResultType
 
     def resolve(id: nil)
-      task = Task.find(id)
-      task.destroy!
+      result = Task.find(id).destroy
+      { deleted: result }
     end
   end
 end
