@@ -1,24 +1,20 @@
-# README
+# GraphQL Ruby sample app
+This repository is a sample app of graphql ruby.
+Create an API server for the todo app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Setup
 
-Things you may want to cover:
+Install dependencies and migrate database.
 
-* Ruby version
+```$xslt
+bundle i
+bundle exce rails db:mirate
+```
 
-* System dependencies
+Start graphql server.
 
-* Configuration
+```
+bundle exec rails s
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Access to http://localhost:3000/graphiql
